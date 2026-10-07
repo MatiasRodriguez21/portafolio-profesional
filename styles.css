@@ -176,8 +176,13 @@ html[data-lang="en"] [lang="es"] { display: none !important; }
 .others { margin-top: 32px; }
 .others h3 { font-size: 16px; margin-bottom: 10px; }
 .others li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; }
-.others li a { font-weight: 600; }
+.others li { padding: 14px 0; }
+.others__main { flex: 1 1 380px; min-width: 0; }
+.others__main strong { display: block; font-weight: 600; margin-bottom: 2px; }
+.others__main p { color: var(--muted); font-size: 14.5px; }
 .others__stack { margin-left: auto; font: 400 12.5px var(--mono); color: var(--muted); }
+.others__links { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14px; }
+.others__links a { font-weight: 600; }
 
 /* Habilidades */
 .sgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }

@@ -130,7 +130,7 @@
       <div class="wrap">
         <header class="section__head">
           <h2><span lang="es">Proyectos</span><span lang="en">Projects</span></h2>
-          <p class="section__note" lang="es">Casos reales con contexto, decisiones técnicas y resultados. El código de los proyectos de trabajo es privado.</p><p class="section__note" lang="en">Real cases with context, technical decisions and outcomes. Code from work projects is private.</p>
+          <p class="section__note" lang="es">Sistemas que desarrollé e implementé, en uso todos los días. Cada caso tiene contexto, decisiones técnicas y resultados; el código de trabajo es privado.</p><p class="section__note" lang="en">Systems I built and rolled out, used every day. Each case covers context, technical decisions and outcomes; work code is private.</p>
         </header>
         <div class="pgrid">
           <article class="pcard">
@@ -141,6 +141,16 @@
             <h3><a class="pcard__link" href="proyectos/conector-erp.html"><span lang="es">Conector ERP ↔ tiendas ↔ depósito</span><span lang="en">ERP ↔ stores ↔ warehouse connector</span></a></h3>
             <p lang="es">Middleware que sincroniza stock, precios, pedidos y cobranzas entre el ERP, 4 tiendas online, el depósito y el data warehouse.</p><p lang="en">Middleware that syncs stock, prices, orders and payments between the ERP, 4 online stores, the warehouse and the data warehouse.</p>
             <ul class="chips"><li>PHP 8</li><li>Laravel 9</li><li>MySQL</li><li>SOAP</li></ul>
+            <span class="pcard__more" aria-hidden="true"><span lang="es">Ver caso →</span><span lang="en">Read case →</span></span>
+          </article>
+          <article class="pcard">
+            <div class="pcard__top">
+              <span class="tag"><span lang="es">Trabajo</span><span lang="en">Work</span></span>
+              <span class="pcard__year">2026</span>
+            </div>
+            <h3><a class="pcard__link" href="proyectos/datalayer-ga4.html"><span lang="es">DataLayer GA4 para PrestaShop</span><span lang="en">GA4 DataLayer for PrestaShop</span></a></h3>
+            <p lang="es">Módulo que envía a Google Tag Manager y GA4 todo el recorrido de compra, con las compras y reembolsos registrados desde el servidor.</p><p lang="en">Module that sends the full purchase journey to Google Tag Manager and GA4, with purchases and refunds recorded server-side.</p>
+            <ul class="chips"><li>PHP</li><li>PrestaShop 8</li><li>Google Tag Manager</li><li>GA4</li></ul>
             <span class="pcard__more" aria-hidden="true"><span lang="es">Ver caso →</span><span lang="en">Read case →</span></span>
           </article>
           <article class="pcard">
@@ -159,48 +169,33 @@
               <span class="pcard__year">2026</span>
             </div>
             <h3><a class="pcard__link" href="proyectos/modulos-ecommerce.html"><span lang="es">Módulos de e-commerce</span><span lang="en">E-commerce modules</span></a></h3>
-            <p lang="es">Más de 15 módulos a medida para tiendas PrestaShop: búsqueda, envíos, facturación y analítica.</p><p lang="en">15+ custom modules for PrestaShop stores: search, shipping, invoicing and analytics.</p>
+            <p lang="es">Más de 15 módulos a medida para tiendas PrestaShop: búsqueda, envíos, facturación y pagos.</p><p lang="en">15+ custom modules for PrestaShop stores: search, shipping, invoicing and payments.</p>
             <ul class="chips"><li>PHP</li><li>PrestaShop 1.7/8</li><li>Smarty</li><li>JavaScript</li></ul>
-            <span class="pcard__more" aria-hidden="true"><span lang="es">Ver caso →</span><span lang="en">Read case →</span></span>
-          </article>
-          <article class="pcard">
-            <div class="pcard__top">
-              <span class="tag"><span lang="es">Trabajo · propio</span><span lang="en">Work · solo</span></span>
-              <span class="pcard__year">2026</span>
-            </div>
-            <h3><a class="pcard__link" href="proyectos/tareas-ia.html"><span lang="es">Tareas redactadas con IA</span><span lang="en">AI-drafted tasks</span></a></h3>
-            <p lang="es">Herramienta interna que crea tareas en Bitrix24 a partir de un pedido corto, con título y descripción redactados por un LLM.</p><p lang="en">Internal tool that creates Bitrix24 tasks from a short request, with title and description drafted by an LLM.</p>
-            <ul class="chips"><li>Python</li><li>API de Anthropic</li><li>JSON Schema</li><li>Bitrix24 REST</li></ul>
-            <span class="pcard__more" aria-hidden="true"><span lang="es">Ver caso →</span><span lang="en">Read case →</span></span>
-          </article>
-          <article class="pcard">
-            <div class="pcard__top">
-              <span class="tag"><span lang="es">Personal</span><span lang="en">Personal</span></span>
-              <span class="pcard__year">2025</span>
-            </div>
-            <h3><a class="pcard__link" href="proyectos/inmobiliaria.html"><span lang="es">Inmobiliaria (proyecto personal)</span><span lang="en">Real estate site (personal project)</span></a></h3>
-            <p lang="es">Sitio de propiedades en venta y alquiler con filtros, favoritos y ficha con mapa.</p><p lang="en">Property listings for sale and rent with filters, favorites and a detail page with a map.</p>
-            <ul class="chips"><li>React 19</li><li>React Router 7</li><li>Tailwind CSS</li><li>Leaflet</li></ul>
             <span class="pcard__more" aria-hidden="true"><span lang="es">Ver caso →</span><span lang="en">Read case →</span></span>
           </article>
         </div>
         <div class="others">
-          <h3><span lang="es">Otros repositorios</span><span lang="en">Other repositories</span></h3>
+          <h3><span lang="es">Otras implementaciones</span><span lang="en">Other implementations</span></h3>
           <ul>
             <li>
-              <a href="https://github.com/MatiasRodriguez21/inventario-simple" target="_blank" rel="noopener">inventario-simple ↗</a>
-              <span lang="es">Inventario con altas, bajas y modificaciones.</span><span lang="en">Inventory app with full CRUD.</span>
-              <span class="others__stack">Laravel · Vercel</span>
+              <div class="others__main"><strong><span lang="es">Backup de facturas en la nube</span><span lang="en">Cloud invoice backup</span></strong><p lang="es">Copia diaria y automática de las facturas del ERP a AWS S3, con permisos mínimos y un visor web para Administración.</p><p lang="en">Daily automatic copy of ERP invoices to AWS S3, with least-privilege access and a web viewer for the finance team.</p></div>
+              <span class="others__stack">Node.js · Express · AWS S3</span>
+              
             </li>
             <li>
-              <a href="https://github.com/MatiasRodriguez21/user-crud-api" target="_blank" rel="noopener">user-crud-api ↗</a>
-              <span lang="es">API GraphQL de usuarios lista para Docker.</span><span lang="en">Users GraphQL API, Docker-ready.</span>
-              <span class="others__stack">TypeScript · Apollo · MongoDB</span>
+              <div class="others__main"><strong><span lang="es">Software de documentación</span><span lang="en">Documentation software</span></strong><p lang="es">Documentación interna que varias personas editan en tiempo real, con permisos por área.</p><p lang="en">Internal documentation several people edit in real time, with per-area permissions.</p></div>
+              <span class="others__stack">Node.js · WebSockets · MySQL</span>
+              
             </li>
             <li>
-              <a href="https://github.com/MatiasRodriguez21/lista-tareas" target="_blank" rel="noopener">lista-tareas ↗</a>
-              <span lang="es">Lista de tareas con guardado local y modo oscuro.</span><span lang="en">To-do list with local storage and dark mode.</span>
-              <span class="others__stack">JavaScript</span>
+              <div class="others__main"><strong><span lang="es">Etiquetas de Mercado Libre</span><span lang="en">Mercado Libre shipping labels</span></strong><p lang="es">Conversor de etiquetas de envío a PDF para imprimir en cualquier impresora. Mi aporte: el conversor ZPL a PDF.</p><p lang="en">Converts shipping labels to PDF so they print on any printer. My part: the ZPL-to-PDF converter.</p></div>
+              <span class="others__stack">Python · FastAPI</span>
+              
+            </li>
+            <li>
+              <div class="others__main"><strong><span lang="es">Gestión inmobiliaria</span><span lang="en">Real estate site</span></strong><p lang="es">Sitio de propiedades con filtros y una API con inicio de sesión. Proyecto personal.</p><p lang="en">Property listings with filters and an API with login. Personal project.</p></div>
+              <span class="others__stack">React · FastAPI</span>
+              <span class="others__links"><a href="proyectos/inmobiliaria.html"><span lang="es">Ver caso</span><span lang="en">Read case</span> →</a> <a href="https://inmobiliaria-app-theta.vercel.app/" target="_blank" rel="noopener"><span lang="es">Ver sitio</span><span lang="en">Live site</span> ↗</a> <a href="https://github.com/MatiasRodriguez21/inmobiliaria-app" target="_blank" rel="noopener"><span lang="es">Código</span><span lang="en">Code</span> ↗</a></span>
             </li>
           </ul>
         </div>
