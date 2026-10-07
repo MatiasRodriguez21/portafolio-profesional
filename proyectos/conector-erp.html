@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conector ERP ↔ tiendas ↔ depósito — Matías Rodríguez</title>
+  <meta name="description" content="Middleware que sincroniza stock, precios, pedidos y cobranzas entre el ERP, 4 tiendas online, el depósito y el data warehouse.">
+  <meta name="author" content="Matías Rodríguez">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      var lang = 'es';
+      try { lang = localStorage.getItem('pp-lang') || (navigator.language || 'es').slice(0, 2); } catch (e) {}
+      if (lang !== 'en') lang = 'es';
+      document.documentElement.lang = lang;
+      document.documentElement.dataset.lang = lang;
+    })();
+  </script>
+</head>
+<body data-title-es="Conector ERP ↔ tiendas ↔ depósito — Matías Rodríguez" data-title-en="ERP ↔ stores ↔ warehouse connector — Matías Rodríguez">
+  <a class="skip" href="#contenido"><span lang="es">Saltar al contenido</span><span lang="en">Skip to content</span></a>
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark" aria-hidden="true">MR</span>
+        <span class="brand__name">Matías Rodríguez</span>
+      </a>
+      <nav class="nav__links" aria-label="Secciones">
+        <a href="../index.html#experiencia"><span lang="es">Experiencia</span><span lang="en">Experience</span></a>
+        <a href="../index.html#proyectos"><span lang="es">Proyectos</span><span lang="en">Projects</span></a>
+        <a href="../index.html#habilidades"><span lang="es">Habilidades</span><span lang="en">Skills</span></a>
+        <a href="../index.html#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
+        <a href="../cv/">CV</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" data-set-lang="es" aria-pressed="true">ES</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn--small btn--solid" href="../Rodriguez_Matias_CV.pdf" download><span lang="es">CV en PDF</span><span lang="en">PDF resume</span></a>
+      </div>
+    </div>
+  </header>
+  <main id="contenido">
+    <header class="chead">
+      <div class="wrap">
+        <p class="crumbs"><a href="../index.html#proyectos"><span lang="es">Proyectos</span><span lang="en">Projects</span></a> <span aria-hidden="true">/</span> <span lang="es">Conector ERP ↔ tiendas ↔ depósito</span><span lang="en">ERP ↔ stores ↔ warehouse connector</span></p>
+        <span class="tag"><span lang="es">Trabajo · en equipo</span><span lang="en">Work · team</span></span>
+        <h1><span lang="es">Conector ERP ↔ tiendas ↔ depósito</span><span lang="en">ERP ↔ stores ↔ warehouse connector</span></h1>
+        <p class="chead__summary" lang="es">Middleware que sincroniza stock, precios, pedidos y cobranzas entre el ERP, 4 tiendas online, el depósito y el data warehouse.</p><p class="chead__summary" lang="en">Middleware that syncs stock, prices, orders and payments between the ERP, 4 online stores, the warehouse and the data warehouse.</p>
+      </div>
+    </header>
+
+    <div class="wrap case">
+      <article class="case__body">
+        <section class="case__sec">
+          <h2><span lang="es">Contexto</span><span lang="en">Context</span></h2>
+          <p lang="es">El ERP solo expone una API SOAP y tenía que alimentar 4 tiendas PrestaShop, un WMS nuevo (BaseLinker) y Google BigQuery. Si una corrida fallaba a mitad de camino, no se podían duplicar pedidos ni cobranzas.</p><p lang="en">The ERP only exposes a SOAP API and had to feed 4 PrestaShop stores, a new WMS (BaseLinker) and Google BigQuery. If a run failed halfway, orders and payments could not be duplicated.</p>
+        </section>
+        <section class="case__sec">
+          <h2><span lang="es">Qué construí</span><span lang="en">What I built</span></h2>
+          <figure class="diagram">
+        <svg viewBox="0 0 640 270" role="img" aria-label="Flujo principal del conector">
+          <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="d-arrow"/></marker></defs>
+          <rect x="10" y="110" width="130" height="56" rx="6" class="d-box"/><text x="75" y="136" class="d-t">ERP</text><text x="75" y="152" class="d-s">SOAP</text><line x1="140" y1="138" x2="236" y2="138" class="d-l" marker-end="url(#arrow)"/><text x="188" y="132" class="d-lab">SOAP</text><rect x="236" y="96" width="160" height="84" rx="6" class="d-box"/><text x="316" y="136" class="d-t">Conector</text><text x="316" y="152" class="d-s">Laravel · colas</text><line x1="396" y1="120" x2="480" y2="40" class="d-l" marker-end="url(#arrow)"/><line x1="396" y1="132" x2="480" y2="100" class="d-l" marker-end="url(#arrow)"/><line x1="396" y1="144" x2="480" y2="160" class="d-l" marker-end="url(#arrow)"/><line x1="396" y1="156" x2="480" y2="220" class="d-l" marker-end="url(#arrow)"/><rect x="480" y="18" width="150" height="44" rx="6" class="d-box"/><text x="555" y="45" class="d-t">PrestaShop ×4</text><rect x="480" y="78" width="150" height="44" rx="6" class="d-box"/><text x="555" y="105" class="d-t">BaseLinker (WMS)</text><rect x="480" y="138" width="150" height="44" rx="6" class="d-box"/><text x="555" y="165" class="d-t">Google BigQuery</text><rect x="480" y="198" width="150" height="44" rx="6" class="d-box"/><text x="555" y="225" class="d-t">Bitrix24 (alertas)</text><rect x="10" y="210" width="130" height="44" rx="6" class="d-box"/><text x="75" y="237" class="d-t">Mercado Pago</text><line x1="140" y1="232" x2="236" y2="168" class="d-l" marker-end="url(#arrow)"/>
+        </svg>
+        <figcaption><span lang="es">Flujo principal del conector</span><span lang="en">Main connector flow</span></figcaption>
+      </figure><ul class="list" lang="es"><li>Envío incremental de pedidos y órdenes de compra al WMS con checkpoint compuesto y modos <code>--dry</code>, <code>--desde</code> y <code>--max</code>.</li><li>Idempotencia en el alta de pedidos y cobranzas, con deduplicación de recibos de Mercado Pago y cola de reintentos.</li><li>ETL a BigQuery de clientes, facturas y stock por depósito.</li><li>Alertas a Bitrix24 y diseño de un panel de monitoreo para 45 comandos y 38 tareas programadas.</li></ul><ul class="list" lang="en"><li>Incremental push of orders and purchase orders to the WMS with a composite checkpoint and <code>--dry</code>, <code>--since</code> and <code>--max</code> modes.</li><li>Idempotent order and payment creation, with Mercado Pago receipt deduplication and a retry queue.</li><li>ETL into BigQuery for customers, invoices and stock per warehouse.</li><li>Bitrix24 alerts and a monitoring dashboard design for 45 commands and 38 scheduled tasks.</li></ul>
+        </section>
+        <section class="case__sec">
+          <h2><span lang="es">Decisiones técnicas</span><span lang="en">Technical decisions</span></h2>
+          <ul class="list" lang="es"><li>Lectura en dos fases y token SOAP cacheado por 50 minutos: cada sincronización pasó de ~4.8 MB a ~200 KB.</li><li>Migración de streaming inserts a Load Jobs en BigQuery para eliminar los bloqueos del streaming buffer.</li><li>Tope por corrida para respetar el límite de 100 requests por minuto del WMS.</li><li>12 documentos de diseño con decisiones y criterios de éxito antes de implementar.</li></ul><ul class="list" lang="en"><li>Two-phase reads and a SOAP token cached for 50 minutes: each sync went from ~4.8 MB to ~200 KB.</li><li>Moved from streaming inserts to BigQuery Load Jobs to remove streaming-buffer locks.</li><li>Per-run cap to respect the WMS limit of 100 requests per minute.</li><li>12 design docs with decisions and success criteria before implementing.</li></ul>
+        </section>
+        <section class="case__sec">
+          <h2><span lang="es">Resultado</span><span lang="en">Outcome</span></h2>
+          <ul class="list" lang="es"><li>Stock y precios actualizados cada 10 minutos en las 4 tiendas.</li><li>Pedidos que llegan solos al WMS, sin duplicados aunque una corrida falle.</li><li>95% menos datos transferidos por sincronización con el ERP.</li></ul><ul class="list" lang="en"><li>Stock and prices updated every 10 minutes across all 4 stores.</li><li>Orders reach the WMS automatically, with no duplicates even if a run fails.</li><li>95% less data transferred per ERP sync.</li></ul>
+        </section>
+
+      </article>
+
+      <aside class="meta" aria-label="Ficha del proyecto">
+        <dl>
+          <div><dt><span lang="es">Mi rol</span><span lang="en">My role</span></dt><dd><span lang="es">Proyecto de equipo en una empresa de e-commerce. Mi aporte: la integración con el WMS, la idempotencia de pedidos y cobranzas, los nuevos ETL y las alertas.</span><span lang="en">Team project at an e-commerce company. My part: the WMS integration, order and payment idempotency, the new ETL jobs and alerting.</span></dd></div>
+          <div><dt><span lang="es">Año</span><span lang="en">Year</span></dt><dd>2026</dd></div>
+          <div><dt><span lang="es">Tipo</span><span lang="en">Type</span></dt><dd><span lang="es">Trabajo · en equipo</span><span lang="en">Work · team</span></dd></div>
+          <div><dt>Stack</dt><dd><ul class="chips"><li>PHP 8</li><li>Laravel 9</li><li>MySQL</li><li>SOAP</li><li>Google BigQuery</li><li>Guzzle</li><li>PHPUnit</li></ul></dd></div>
+        </dl>
+        
+      </aside>
+    </div>
+
+    <div class="wrap"><nav class="pn" aria-label="Otros casos"><span></span><a class="pn__item pn__item--next" href="trazabilidad-seriales.html"><span><span lang="es">Siguiente →</span><span lang="en">Next →</span></span><strong><span lang="es">Trazabilidad de seriales</span><span lang="en">Serial-number tracking</span></strong></a></nav></div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <span>© 2026 Matías Rodríguez</span>
+      <span><span lang="es">Sitio estático alojado en GitHub Pages</span><span lang="en">Static site hosted on GitHub Pages</span></span>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

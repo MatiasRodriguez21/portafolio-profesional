@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matías Rodríguez — CV</title>
+  <meta name="description" content="Currículum de Matías Rodríguez, desarrollador full stack en Córdoba, Argentina. Integraciones, automatización y e-commerce.">
+  <meta name="author" content="Matías Rodríguez">
+  <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Idioma: el elegido antes, o el del navegador.
+    (function () {
+      var lang = 'es';
+      try { lang = localStorage.getItem('pp-lang') || (navigator.language || 'es').slice(0, 2); } catch (e) {}
+      if (lang !== 'en') lang = 'es';
+      document.documentElement.lang = lang;
+      document.documentElement.dataset.lang = lang;
+    })();
+  </script>
+</head>
+<body>
+  <main class="cv">
+
+    <!-- ============ Encabezado ============ -->
+    <header class="top">
+      <div class="top__id">
+        <h1>Matías Rodríguez</h1>
+        <p class="top__role">
+          <span lang="es">Desarrollador Full Stack · Integraciones y automatización</span>
+          <span lang="en">Full Stack Developer · Integrations and automation</span>
+        </p>
+        <p class="top__meta">
+          <span>Córdoba, Argentina</span>
+          <a href="mailto:mati.rodriguez1201@gmail.com">mati.rodriguez1201@gmail.com</a>
+        </p>
+      </div>
+
+      <nav class="tools" aria-label="Opciones">
+        <a class="tool" href="../index.html"><span lang="es">← Portafolio</span><span lang="en">← Portfolio</span></a>
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" data-set-lang="es" aria-pressed="true">ES</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="tool" href="../Rodriguez_Matias_CV.pdf" download>
+          <span lang="es">Descargar PDF</span><span lang="en">Download PDF</span>
+        </a>
+        <button class="tool" type="button" id="print">
+          <span lang="es">Imprimir</span><span lang="en">Print</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ============ Perfil ============ -->
+    <section class="row">
+      <h2><span lang="es">Perfil</span><span lang="en">About</span></h2>
+      <div class="row__body">
+        <p lang="es">Desarrollador full stack orientado a integraciones y automatización. Trabajo de punta a punta, del backend y las APIs a aplicaciones web y móviles, conectando ERP, tiendas online, marketplaces, depósito y datos en producción. Estudio la Tecnicatura en Desarrollo de Software.</p>
+        <p lang="en">Full stack developer focused on integrations and automation. I work end to end, from backend and APIs to web and mobile apps, connecting ERPs, online stores, marketplaces, warehouses and data in production. Currently studying Software Development.</p>
+      </div>
+    </section>
+
+    <!-- ============ Experiencia ============ -->
+    <section class="row">
+      <h2><span lang="es">Experiencia</span><span lang="en">Experience</span></h2>
+      <div class="row__body">
+
+        <article class="item">
+          <p class="item__when"><span lang="es">2026 — hoy</span><span lang="en">2026 — now</span></p>
+          <div>
+            <h3>
+              <span lang="es">Desarrollador Full Stack / Integraciones</span>
+              <span lang="en">Full Stack Developer / Integrations</span>
+            </h3>
+            <p class="item__org">
+              <span lang="es">Empresa de e-commerce multicanal · Córdoba</span>
+              <span lang="en">Multichannel e-commerce company · Córdoba</span>
+            </p>
+            <ul lang="es">
+              <li>Integré el ERP con 4 tiendas PrestaShop, Mercado Pago y el WMS en Laravel (APIs REST y SOAP).</li>
+              <li>Garanticé sincronizaciones sin duplicados con idempotencia, reintentos y control de rate limit.</li>
+              <li>Reduje un 95% la carga de cada sincronización con el ERP y armé el ETL a Google BigQuery.</li>
+              <li>Desarrollé de punta a punta una app de trazabilidad de seriales que el depósito usa a diario.</li>
+              <li>Creé más de 15 módulos PrestaShop a medida: buscador, envío en el día, Factura A y GA4.</li>
+              <li>Automaticé la creación de tareas en Bitrix24 con IA (API de Anthropic).</li>
+            </ul>
+            <ul lang="en">
+              <li>Integrated the ERP with 4 PrestaShop stores, Mercado Pago and the WMS using Laravel (REST and SOAP APIs).</li>
+              <li>Built duplicate-free syncs with idempotency, retries and rate-limit control.</li>
+              <li>Cut the payload of each ERP sync by 95% and built the ETL into Google BigQuery.</li>
+              <li>Built, end to end, a serial-number tracking app used daily by the warehouse team.</li>
+              <li>Developed 15+ custom PrestaShop modules: search, same-day shipping, invoicing and GA4.</li>
+              <li>Automated Bitrix24 task creation with AI (Anthropic API).</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="item">
+          <p class="item__when">2022 — 2026</p>
+          <div>
+            <h3>
+              <span lang="es">Encargado del área de Digitalización</span>
+              <span lang="en">Digitization Area Lead</span>
+            </h3>
+            <p class="item__org">
+              <span lang="es">Ministerio Público Fiscal · Córdoba</span>
+              <span lang="en">Public Prosecutor's Office · Córdoba</span>
+            </p>
+            <ul lang="es">
+              <li>Coordiné un equipo y reorganicé el proceso de digitalización de documentos del área.</li>
+              <li>Impulsé el uso de herramientas compartidas para mejorar la comunicación entre departamentos.</li>
+            </ul>
+            <ul lang="en">
+              <li>Led a team and reorganized the area's document digitization process.</li>
+              <li>Introduced shared tools to improve communication between departments.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="item">
+          <p class="item__when">2019 — 2020</p>
+          <div>
+            <h3>
+              <span lang="es">Soporte técnico</span>
+              <span lang="en">IT Support</span>
+            </h3>
+            <p class="item__org">SocioPLUS · Córdoba</p>
+            <ul lang="es">
+              <li>Resolví incidencias técnicas de empleados y gerencia, aplicando procedimientos de seguridad de datos.</li>
+            </ul>
+            <ul lang="en">
+              <li>Solved technical issues for staff and management, following data security procedures.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Proyectos ============ -->
+    <section class="row">
+      <h2><span lang="es">Proyectos</span><span lang="en">Projects</span></h2>
+      <div class="row__body">
+        <article class="item">
+          <p class="item__when">2026</p>
+          <div>
+            <h3><span lang="es">Conector ERP ↔ tiendas ↔ depósito</span><span lang="en">ERP ↔ stores ↔ warehouse connector</span></h3>
+            <p lang="es">Sincroniza stock, precios, pedidos y cobranzas entre el ERP, 4 tiendas online y el depósito.</p>
+            <p lang="en">Keeps stock, prices, orders and payments in sync between the ERP, 4 online stores and the warehouse.</p>
+            <p class="item__stack">Laravel · SOAP · BigQuery</p>
+          </div>
+        </article>
+        <article class="item">
+          <p class="item__when">2026</p>
+          <div>
+            <h3><span lang="es">Trazabilidad de seriales</span><span lang="en">Serial-number tracking</span></h3>
+            <p lang="es">App web y Android para escáneres de depósito que registra el serial de cada máquina en su pedido.</p>
+            <p lang="en">Web and Android app for warehouse scanners that records each machine's serial number on its order.</p>
+            <p class="item__stack">Laravel 12 · Kotlin · Docker</p>
+          </div>
+        </article>
+        <article class="item">
+          <p class="item__when">2026</p>
+          <div>
+            <h3><span lang="es">Módulos para tienda online</span><span lang="en">Online store modules</span></h3>
+            <p lang="es">Buscador tolerante a errores, envío en el día, Factura A y analítica de ventas.</p>
+            <p lang="en">Typo-tolerant search, same-day shipping, invoicing and sales analytics.</p>
+            <p class="item__stack">PrestaShop · PHP · JavaScript</p>
+          </div>
+        </article>
+        <article class="item">
+          <p class="item__when">2025</p>
+          <div>
+            <h3>
+              <a href="https://inmobiliaria-app-theta.vercel.app/" target="_blank" rel="noopener">
+                <span lang="es">Inmobiliaria (proyecto personal)</span><span lang="en">Real estate site (personal project)</span>
+              </a>
+            </h3>
+            <p lang="es">Listado de propiedades con filtros en la URL, favoritos, ficha con mapa y tests unitarios.</p>
+            <p lang="en">Property listings with URL-based filters, favorites, detail pages with maps and unit tests.</p>
+            <p class="item__stack">React · Tailwind CSS · Jest</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Educación ============ -->
+    <section class="row">
+      <h2><span lang="es">Educación</span><span lang="en">Education</span></h2>
+      <div class="row__body">
+        <article class="item">
+          <p class="item__when"><span lang="es">En curso</span><span lang="en">In progress</span></p>
+          <div>
+            <h3><span lang="es">Tecnicatura en Desarrollo de Software</span><span lang="en">Associate Degree in Software Development</span></h3>
+            <p class="item__org">Instituto Politécnico de Córdoba</p>
+          </div>
+        </article>
+        <article class="item">
+          <p class="item__when">2022 — 2024</p>
+          <div>
+            <h3><span lang="es">Cursos de Desarrollo Web, Python y React</span><span lang="en">Web Development, Python and React courses</span></h3>
+            <p class="item__org">Udemy</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Habilidades ============ -->
+    <section class="row">
+      <h2><span lang="es">Habilidades</span><span lang="en">Skills</span></h2>
+      <div class="row__body">
+        <dl class="skills">
+          <div><dt>Backend</dt><dd>PHP 8, Laravel, Node.js, Express, Python (FastAPI)</dd></div>
+          <div><dt>E-commerce</dt><dd>PrestaShop, WooCommerce, Mercado Libre, Mercado Pago</dd></div>
+          <div><dt><span lang="es">Integraciones</span><span lang="en">Integrations</span></dt><dd><span lang="es">APIs REST y SOAP, webhooks, OAuth</span><span lang="en">REST and SOAP APIs, webhooks, OAuth</span></dd></div>
+          <div><dt><span lang="es">Datos</span><span lang="en">Data</span></dt><dd>MySQL, Google BigQuery, PostgreSQL, MongoDB, Redis</dd></div>
+          <div><dt>Frontend</dt><dd>HTML, CSS, JavaScript, React, TypeScript</dd></div>
+          <div><dt>DevOps</dt><dd>Docker, GitHub Actions, AWS S3, Linux</dd></div>
+          <div><dt><span lang="es">IA</span><span lang="en">AI</span></dt><dd>Claude Code, <span lang="es">API de Anthropic</span><span lang="en">Anthropic API</span></dd></div>
+          <div><dt><span lang="es">Métodos</span><span lang="en">Methods</span></dt><dd>Scrum, Kanban, Git, GitHub</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ Idiomas ============ -->
+    <section class="row">
+      <h2><span lang="es">Idiomas</span><span lang="en">Languages</span></h2>
+      <div class="row__body">
+        <dl class="skills">
+          <div><dt><span lang="es">Español</span><span lang="en">Spanish</span></dt><dd><span lang="es">Nativo</span><span lang="en">Native</span></dd></div>
+          <div><dt><span lang="es">Inglés</span><span lang="en">English</span></dt><dd><span lang="es">Intermedio alto (B2)</span><span lang="en">Upper intermediate (B2)</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ Contacto ============ -->
+    <section class="row">
+      <h2><span lang="es">Contacto</span><span lang="en">Contact</span></h2>
+      <div class="row__body">
+        <dl class="skills links">
+          <div>
+            <dt>Email</dt>
+            <dd>
+              <a href="mailto:mati.rodriguez1201@gmail.com">mati.rodriguez1201@gmail.com</a>
+              <button type="button" class="copy" id="copy" data-email="mati.rodriguez1201@gmail.com">
+                <span lang="es">Copiar</span><span lang="en">Copy</span>
+              </button>
+            </dd>
+          </div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/matirodriguez23/" target="_blank" rel="noopener">linkedin.com/in/matirodriguez23</a></dd></div>
+          <div><dt>GitHub</dt><dd><a href="https://github.com/MatiasRodriguez21" target="_blank" rel="noopener">github.com/MatiasRodriguez21</a></dd></div>
+          <div><dt><span lang="es">Portafolio</span><span lang="en">Portfolio</span></dt><dd><a href="https://matiasrodriguez21.github.io/portafolio/" target="_blank" rel="noopener">matiasrodriguez21.github.io/portafolio</a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span lang="es">Actualizado en octubre de 2026</span>
+      <span lang="en">Updated October 2026</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
